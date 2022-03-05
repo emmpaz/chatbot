@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "open": "^8.4.0",
+    "set-interval-async": "^2.0.3",
+    "tmi.js": "^1.8.5"
+  }
+}
