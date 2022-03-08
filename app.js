@@ -2,6 +2,10 @@ const tmi = require('tmi.js');
 const { exec } = require("child_process");
 const { setIntervalAsync } = require('set-interval-async/dynamic')
 const { randomInt } = require('crypto');
+const dotenv = require('dotenv');
+
+
+dotenv.config({path:'./.env'});
 
 //list of songs
 var list = [];
@@ -13,7 +17,7 @@ const client = new tmi.Client({
 	options: { debug: true },
 	identity: {
 		username: 'handymanni',
-		password: 'oauth:nte7rihdj0tsmyengfurb1vm3kutf5'
+		password: process.env.PASSWORD
 	},
 	channels: [ 'handymanni' ]
 });
